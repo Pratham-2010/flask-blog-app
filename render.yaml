@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-blog-app
+    env: python
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
+    plan: free
+
